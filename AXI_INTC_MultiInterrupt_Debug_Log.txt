@@ -1,0 +1,121 @@
+# AXI Interrupt Controller Debug Log: Dual Interrupt Setup
+
+## Objective
+
+To set up and debug the AXI Interrupt Controller (AXI INTC) for handling two custom IP interrupts: one from a convolution accelerator and another from a multiplication accelerator.
+
+---
+
+## Initial Setup
+
+### System Configuration:
+
+* MicroBlaze processor
+* AXI Interrupt Controller (AXI INTC)
+* Two custom hardware accelerators:
+
+  * Convolution IP (interrupt 0)
+  * Multiplication IP (interrupt 1)
+* Interrupt signals are combined using an AXI Concat IP before reaching the INTC
+
+### Register Mapping:
+
+* IER (Interrupt Enable Register): Enables specific interrupts
+* ISR (Interrupt Status Register): Shows active interrupts
+* IPR (Interrupt Pending Register): Pending interrupts
+* MER (Master Enable Register): Global enable
+
+---
+
+## Debugging Journey & Issues Faced
+
+### 1. **Single Interrupt Working**
+
+* **Observation**: Only interrupt 1 (multiplication) triggered the ISR. Interrupt 0 (convolution) did not trigger.
+* **Suspected Causes**:
+
+  * Incorrect order of enabling interrupts
+  * MER not set properly
+  * IER register value incorrect
+
+### 2. **Checked IER and ISR/ IPR**
+
+* Used `XIntc_In32()` to read values:
+
+  * Always read `0` even when the interrupt was supposed to be active
+
+### 3. **MER Enable Issue**
+
+* Used `XIntc_Out32(INTC_BASEADDR, XIN_MER_OFFSET, XIN_MER_ME | XIN_MER_HIE);`
+* Issue: Too many arguments or wrong macro used
+* Fixed by using correct base address and defined macros
+
+### 4. **Concat Port Mapping Mistake**
+
+* Swapped interrupt lines on concat block
+* Still, only multiplication interrupt (MSB) was working
+
+### 5. **Code Reorganization**
+
+* Moved hardware IP trigger/start **after** interrupt setup:
+
+```c
+if (SetupInterrupt(&InterruptController) != XST_SUCCESS) {
+    xil_printf("Interrupt setup failed\r\n");
+    return -1;
+}
+
+// Only now start the accelerator
+Xil_Out32(XPAR_HARDWARE_ACCELERATOR_0_BASEADDR , 1);
+```
+
+* This was **crucial fix**: Convolution IP was triggering interrupt before software setup was done, so the signal was missed.
+
+### 6. **Final Fix Summary**:
+
+* Reordered code so IP triggers come after INTC setup
+* Verified MER, IER settings via register reads
+* Verified ISR entries were properly connected
+* Confirmed Concat IP had correct width and mapping
+* Ensured software did not block or delay ISR enablement
+
+---
+
+## Key Learnings
+
+### Essential Steps for AXI INTC with Multiple Interrupts:
+
+1. **Initialize INTC** with `XIntc_Initialize()`
+2. **Connect Handlers** using `XIntc_Connect()`
+3. **Start the INTC** with `XIntc_Start()`
+4. **Enable individual interrupts** via `XIntc_Enable()`
+5. **Enable MER** via:
+
+```c
+XIntc_Out32(XPAR_INTC_SINGLE_BASEADDR + XIN_MER_OFFSET, XIN_MER_ME | XIN_MER_HIE);
+```
+
+6. **Start IPs only after setup** is complete
+7. **Use handshaking or enable bits** to prevent premature interrupt generation
+
+### Tools and Macros Used
+
+* `XIntc_In32()` / `XIntc_Out32()` for direct register access
+* `XIN_MER_OFFSET`, `XIN_IER_OFFSET`, `XIN_ISR_OFFSET`, etc.
+* `XIL_EXCEPTION_ID_INT`, `Xil_ExceptionRegisterHandler()`
+
+---
+
+## Conclusion
+
+The issue was caused by the convolution IP triggering an interrupt **before** the interrupt controller was properly set up. By delaying the hardware trigger and confirming register states, both interrupts were successfully handled.
+
+This log summarizes the systematic debugging process, common pitfalls, and final resolutions.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+AT THE END THE 
+
+SOLUTION WAS MY CUSTOM IP WAS TRIGGERING THE CONVOLUTION INTERRUPT BEFORE INTERRUPT CONTROLLER HAS BEEN SET UP SO THATS WHY IT IS NOT GETTING CONSIDERED.
+I CAME TO KNOW THIS WHEN AT THE START ITSELF I MADE MULTIPLICATION INTERRUPT HIGH,NO INTERRUPT GETTING TRIGGERED SO I MADE IT 1 WHEN IT IS JUST AFTER THE INTERRUPT SETUP FUNCTION THENIT IS WORKING SO THE ONLY WAY IS CONVOLUTION INTERRUPT IS GETTING HIGH BEFORE AXI_INTC IS SETUP..
+Before axi intc setup it didnot happen but after axi setup it happened that means setup may cause axi interrupt to get triggered....................................................................................................................................................................................
+
