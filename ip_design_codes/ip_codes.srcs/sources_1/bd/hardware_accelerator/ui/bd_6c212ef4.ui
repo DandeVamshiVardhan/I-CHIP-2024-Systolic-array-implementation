@@ -1,0 +1,81 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port M_AXI_0 -pg 1 -y 140 -defaultsOSRD
+preplace port convolution_interrupt_0 -pg 1 -y 20 -defaultsOSRD
+preplace port ACLK -pg 1 -y 20 -defaultsOSRD
+preplace port ARESETN -pg 1 -y 50 -defaultsOSRD
+preplace port M_AXI_ACLK_0 -pg 1 -y 350 -defaultsOSRD
+preplace port S_AXI_ACLK_0 -pg 1 -y 200 -defaultsOSRD
+preplace port M_AXI_ARESETN_0 -pg 1 -y 380 -defaultsOSRD
+preplace port S_AXI_ARESETN_0 -pg 1 -y 230 -defaultsOSRD
+preplace port multiplication_interrupt_0 -pg 1 -y 50 -defaultsOSRD
+preplace port S_AXI_0 -pg 1 -y 140 -defaultsOSRD
+preplace inst input_mem_0 -pg 1 -lvl 4 -y 530 -defaultsOSRD
+preplace inst mux_0 -pg 1 -lvl 6 -y 960 -defaultsOSRD
+preplace inst weight_mem_0 -pg 1 -lvl 5 -y 670 -defaultsOSRD
+preplace inst mux_1 -pg 1 -lvl 6 -y 1140 -defaultsOSRD
+preplace inst vir_input_mem_0 -pg 1 -lvl 5 -y 940 -defaultsOSRD
+preplace inst and_gate_0 -pg 1 -lvl 3 -y 600 -defaultsOSRD
+preplace inst systolic_array_0 -pg 1 -lvl 7 -y 1010 -defaultsOSRD -resize 260 156
+preplace inst axi_master_0 -pg 1 -lvl 9 -y 240 -defaultsOSRD
+preplace inst axi_slave_0 -pg 1 -lvl 1 -y 180 -defaultsOSRD
+preplace inst output_mem_0 -pg 1 -lvl 8 -y 860 -defaultsOSRD
+preplace inst controller_0 -pg 1 -lvl 2 -y 710 -defaultsOSRD
+preplace netloc axi_master_0_capture_wi_data 1 4 6 1770 520 NJ 520 NJ 520 NJ 520 NJ 520 3670
+preplace netloc M_AXI_ACLK_0_1 1 0 9 20J 360 NJ 360 NJ 360 NJ 360 NJ 360 NJ 360 NJ 360 NJ 360 NJ
+preplace netloc controller_0_vr_mem_wr_addr 1 2 3 NJ 760 1200J 750 1620
+preplace netloc input_mem_0_rd_288bit_data 1 4 2 1610 1140 NJ
+preplace netloc systolic_array_0_rd_data 1 7 1 2790
+preplace netloc controller_0_cvltn_or_mltpn 1 2 4 920J 1050 NJ 1050 NJ 1050 2170
+preplace netloc axi_slave_0_matrix_a_address 1 1 8 NJ 210 NJ 210 NJ 210 NJ 210 NJ 210 NJ 210 NJ 210 3110
+preplace netloc weight_mem_0_rd_288bit_data 1 5 1 2150
+preplace netloc axi_master_0_ended_reading_cnvtn_data 1 1 9 490 540 960J 670 NJ 670 1650J 480 NJ 480 NJ 480 NJ 480 NJ 480 3630
+preplace netloc output_mem_0_rd_data 1 8 1 3180
+preplace netloc axi_slave_0_start_convolution 1 1 8 NJ 70 NJ 70 NJ 70 NJ 70 NJ 70 NJ 70 NJ 70 3190
+preplace netloc axi_slave_0_matrix_b_dimension 1 1 8 430 280 NJ 280 NJ 280 1700 280 NJ 280 NJ 280 NJ 280 NJ
+preplace netloc controller_0_in_mem_rd_addr 1 2 2 NJ 720 1160
+preplace netloc axi_master_0_input_memory_address 1 3 7 1210 390 1750J 450 NJ 450 NJ 450 NJ 450 3140J 460 3680
+preplace netloc axi_slave_0_image_dimensions 1 1 8 480 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 3130
+preplace netloc S_AXI_ARESETN_0_1 1 0 8 40 400 440 530 950 830 NJ 830 NJ 830 NJ 830 NJ 830 NJ
+preplace netloc mux_0_out 1 6 1 2460
+preplace netloc axi_master_0_output_memory_address 1 7 3 2800 430 3160J 440 3610
+preplace netloc controller_0_start_mltpn_writing_fsm 1 2 7 NJ 700 NJ 700 1670J 500 NJ 500 NJ 500 NJ 500 3190
+preplace netloc axi_slave_0_image_address 1 1 8 NJ 90 NJ 90 NJ 90 NJ 90 NJ 90 NJ 90 NJ 90 3180
+preplace netloc controller_0_wt_mem_rd_addr 1 2 3 NJ 740 NJ 740 1720
+preplace netloc axi_master_0_rd_data 1 3 7 1230 800 1710 530 NJ 530 NJ 530 NJ 530 NJ 530 3640
+preplace netloc axi_master_0_M_AXI 1 9 1 NJ
+preplace netloc axi_master_0_ended_multiplication 1 0 10 50 350 NJ 350 NJ 350 NJ 350 1650J 260 NJ 260 NJ 260 NJ 260 3100J 40 3610
+preplace netloc weight_mem_0_rd_32bit_data 1 5 1 2160
+preplace netloc axi_slave_0_kernel_dimension 1 1 8 470 160 NJ 160 NJ 160 1690 270 NJ 270 NJ 270 NJ 270 3120J
+preplace netloc controller_0_rd_address 1 2 3 930J 790 1210 790 1740
+preplace netloc controller_0_vir_wr_enable 1 2 3 940J 680 NJ 680 1630
+preplace netloc and_gate_0_out 1 3 4 1190 780 1730 1080 2190J 1060 2470J
+preplace netloc axi_master_0_ended_convolution 1 0 10 50 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 3620
+preplace netloc controller_0_start_cnvtn_writing_fsm 1 2 7 900J 690 NJ 690 1660J 490 NJ 490 NJ 490 NJ 490 3170
+preplace netloc axi_slave_0_matrix_b_address 1 1 8 NJ 250 NJ 250 NJ 250 1610J 240 NJ 240 NJ 240 NJ 240 3110
+preplace netloc axi_slave_0_matrix_a_dimension 1 1 8 450 240 NJ 240 1170 400 1640J 460 NJ 460 NJ 460 NJ 460 3130
+preplace netloc S_AXI_0_1 1 0 1 NJ
+preplace netloc axi_master_0_capture_in_data 1 3 7 1220 660 1630J 470 NJ 470 NJ 470 NJ 470 NJ 470 3650
+preplace netloc axi_master_0_weight_memory_address 1 4 6 1760 440 NJ 440 NJ 440 NJ 440 3150J 450 3660
+preplace netloc axi_slave_0_start_multiplication 1 1 8 NJ 190 NJ 190 NJ 190 NJ 190 NJ 190 NJ 190 NJ 190 3190
+preplace netloc axi_slave_0_multiplication_interrupt 1 1 9 NJ 290 NJ 290 NJ 290 1640J 250 NJ 250 NJ 250 NJ 250 3090J 30 3680J
+preplace netloc axi_slave_0_convolution_interrupt 1 1 9 NJ 170 NJ 170 NJ 170 NJ 170 NJ 170 NJ 170 NJ 170 3080J 20 NJ
+preplace netloc controller_0_ou_mem_wr_addr 1 2 6 900J 1060 NJ 1060 NJ 1060 2150J 1040 2450J 870 N
+preplace netloc input_mem_0_rd_data 1 4 1 1640
+preplace netloc controller_0_ou_mem_rd_addr 1 2 5 890J 1070 NJ 1070 NJ 1070 2180J 1050 N
+preplace netloc mux_1_out 1 6 1 2480
+preplace netloc axi_master_0_ended_reading_mltn_data 1 1 9 490 880 940J 800 1220J 760 1680J 510 NJ 510 NJ 510 NJ 510 NJ 510 3620
+preplace netloc M_AXI_ARESETN_0_1 1 0 9 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ
+preplace netloc axi_slave_0_kernel_address 1 1 8 NJ 130 NJ 130 NJ 130 NJ 130 NJ 130 NJ 130 NJ 130 3120
+preplace netloc vir_input_mem_0_rd_data 1 5 1 N
+preplace netloc controller_0_ou_wr_enable 1 2 6 910J 810 NJ 810 NJ 810 NJ 810 NJ 810 2780
+preplace netloc S_AXI_ACLK_0_1 1 0 8 30 390 460 460 NJ 460 1180 770 1750 820 NJ 820 2470 880 2790J
+preplace netloc controller_0_rst_module 1 2 1 910
+levelinfo -pg 1 0 240 690 1060 1420 1960 2320 2630 2940 3400 3700 -top 0 -bot 1220
+"
+}
+{
+   "da_clkrst_cnt":"6"
+}

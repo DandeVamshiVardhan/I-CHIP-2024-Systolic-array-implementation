@@ -1,0 +1,64 @@
+-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-- --------------------------------------------------------------------------------
+-- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+-- Date        : Tue May 20 12:42:12 2025
+-- Host        : LAPTOP-7P8LB6PD running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub {E:/vivado
+--               files/I_CHIP_2024/ip_design_codes/ip_codes.srcs/sources_1/bd/hardware_accelerator/ip/hardware_accelerator_axi_slave_0_0/hardware_accelerator_axi_slave_0_0_stub.vhdl}
+-- Design      : hardware_accelerator_axi_slave_0_0
+-- Purpose     : Stub declaration of top-level module interface
+-- Device      : xczu7ev-ffvc1156-2-e
+-- --------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity hardware_accelerator_axi_slave_0_0 is
+  Port ( 
+    start_convolution : out STD_LOGIC;
+    image_address : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    image_dimensions : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    kernel_address : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    kernel_dimension : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    ended_convolution : in STD_LOGIC;
+    convolution_interrupt : out STD_LOGIC;
+    start_multiplication : out STD_LOGIC;
+    matrix_a_address : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    matrix_a_dimension : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    matrix_b_address : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    matrix_b_dimension : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    ended_multiplication : in STD_LOGIC;
+    multiplication_interrupt : out STD_LOGIC;
+    S_AXI_ACLK : in STD_LOGIC;
+    S_AXI_ARESETN : in STD_LOGIC;
+    S_AXI_AWADDR : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    S_AXI_AWPROT : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_AWVALID : in STD_LOGIC;
+    S_AXI_AWREADY : out STD_LOGIC;
+    S_AXI_WDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    S_AXI_WSTRB : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S_AXI_WVALID : in STD_LOGIC;
+    S_AXI_WREADY : out STD_LOGIC;
+    S_AXI_BRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_BVALID : out STD_LOGIC;
+    S_AXI_BREADY : in STD_LOGIC;
+    S_AXI_ARADDR : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    S_AXI_ARPROT : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_ARVALID : in STD_LOGIC;
+    S_AXI_ARREADY : out STD_LOGIC;
+    S_AXI_RDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    S_AXI_RRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_RVALID : out STD_LOGIC;
+    S_AXI_RREADY : in STD_LOGIC
+  );
+
+end hardware_accelerator_axi_slave_0_0;
+
+architecture stub of hardware_accelerator_axi_slave_0_0 is
+attribute syn_black_box : boolean;
+attribute black_box_pad_pin : string;
+attribute syn_black_box of stub : architecture is true;
+attribute black_box_pad_pin of stub : architecture is "start_convolution,image_address[31:0],image_dimensions[7:0],kernel_address[31:0],kernel_dimension[7:0],ended_convolution,convolution_interrupt,start_multiplication,matrix_a_address[31:0],matrix_a_dimension[7:0],matrix_b_address[31:0],matrix_b_dimension[7:0],ended_multiplication,multiplication_interrupt,S_AXI_ACLK,S_AXI_ARESETN,S_AXI_AWADDR[5:0],S_AXI_AWPROT[2:0],S_AXI_AWVALID,S_AXI_AWREADY,S_AXI_WDATA[31:0],S_AXI_WSTRB[3:0],S_AXI_WVALID,S_AXI_WREADY,S_AXI_BRESP[1:0],S_AXI_BVALID,S_AXI_BREADY,S_AXI_ARADDR[5:0],S_AXI_ARPROT[2:0],S_AXI_ARVALID,S_AXI_ARREADY,S_AXI_RDATA[31:0],S_AXI_RRESP[1:0],S_AXI_RVALID,S_AXI_RREADY";
+attribute X_CORE_INFO : string;
+attribute X_CORE_INFO of stub : architecture is "axi_slave,Vivado 2018.3";
+begin
+end;
