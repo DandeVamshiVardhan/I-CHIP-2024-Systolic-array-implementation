@@ -1,0 +1,320 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Tue Jul 29 12:00:33 2025
+| Host         : LAPTOP-7P8LB6PD running 64-bit major release  (build 9200)
+| Command      : report_drc -file hardware_acceletor_wrapper_drc_routed.rpt -pb hardware_acceletor_wrapper_drc_routed.pb -rpx hardware_acceletor_wrapper_drc_routed.rpx
+| Design       : hardware_acceletor_wrapper
+| Device       : xczu7ev-ffvc1156-2-e
+| Speed File   : -2
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 56
++--------+------------------+----------------------------+------------+
+| Rule   | Severity         | Description                | Violations |
++--------+------------------+----------------------------+------------+
+| NSTD-1 | Critical Warning | Unspecified I/O Standard   | 1          |
+| UCIO-1 | Critical Warning | Unconstrained Logical Port | 1          |
+| DPIP-2 | Warning          | Input pipelining           | 36         |
+| DPOP-3 | Warning          | PREG Output pipelining     | 9          |
+| DPOP-4 | Warning          | MREG Output pipelining     | 9          |
++--------+------------------+----------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+NSTD-1#1 Critical Warning
+Unspecified I/O Standard  
+239 out of 239 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: S_AXI_ARESETN, S_AXI_ACLK, S_AXI_0_rdata[31:0], S_AXI_0_bresp[1:0], S_AXI_0_araddr[4], S_AXI_0_araddr[3], S_AXI_0_araddr[2], S_AXI_0_wdata[31:0], S_AXI_0_rresp[1:0], S_AXI_0_awaddr[4], S_AXI_0_awaddr[3], S_AXI_0_awaddr[2], S_AXI_0_wstrb[3:0], S_AXI_0_arready, S_AXI_0_arvalid (the first 15 of 41 listed).
+Related violations: <none>
+
+UCIO-1#1 Critical Warning
+Unconstrained Logical Port  
+239 out of 239 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: S_AXI_ARESETN, S_AXI_ACLK, S_AXI_0_rdata[31:0], S_AXI_0_bresp[1:0], S_AXI_0_araddr[4], S_AXI_0_araddr[3], S_AXI_0_araddr[2], S_AXI_0_wdata[31:0], S_AXI_0_rresp[1:0], S_AXI_0_awaddr[4], S_AXI_0_awaddr[3], S_AXI_0_awaddr[2], S_AXI_0_wstrb[3:0], S_AXI_0_arready, S_AXI_0_arvalid (the first 15 of 41 listed).
+Related violations: <none>
+
+DPIP-2#1 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[0].pe/m2/multiplied input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[0].pe/m2/multiplied/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#2 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[0].pe/m2/multiplied input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[0].pe/m2/multiplied/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#3 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[0].pe/m2/multiplied__0 input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[0].pe/m2/multiplied__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#4 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[0].pe/m2/multiplied__0 input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[0].pe/m2/multiplied__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#5 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[1].pe/m2/multiplied input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[1].pe/m2/multiplied/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#6 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[1].pe/m2/multiplied input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[1].pe/m2/multiplied/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#7 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[1].pe/m2/multiplied__0 input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[1].pe/m2/multiplied__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#8 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[1].pe/m2/multiplied__0 input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[1].pe/m2/multiplied__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#9 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[2].pe/m2/multiplied input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[2].pe/m2/multiplied/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#10 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[2].pe/m2/multiplied input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[2].pe/m2/multiplied/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#11 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[2].pe/m2/multiplied__0 input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[2].pe/m2/multiplied__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#12 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[2].pe/m2/multiplied__0 input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[2].pe/m2/multiplied__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#13 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[3].pe/m2/multiplied input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[3].pe/m2/multiplied/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#14 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[3].pe/m2/multiplied input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[3].pe/m2/multiplied/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#15 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[3].pe/m2/multiplied__0 input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[3].pe/m2/multiplied__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#16 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[3].pe/m2/multiplied__0 input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[3].pe/m2/multiplied__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#17 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[4].pe/m2/multiplied input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[4].pe/m2/multiplied/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#18 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[4].pe/m2/multiplied input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[4].pe/m2/multiplied/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#19 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[4].pe/m2/multiplied__0 input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[4].pe/m2/multiplied__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#20 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[4].pe/m2/multiplied__0 input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[4].pe/m2/multiplied__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#21 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[5].pe/m2/multiplied input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[5].pe/m2/multiplied/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#22 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[5].pe/m2/multiplied input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[5].pe/m2/multiplied/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#23 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[5].pe/m2/multiplied__0 input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[5].pe/m2/multiplied__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#24 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[5].pe/m2/multiplied__0 input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[5].pe/m2/multiplied__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#25 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[6].pe/m2/multiplied input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[6].pe/m2/multiplied/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#26 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[6].pe/m2/multiplied input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[6].pe/m2/multiplied/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#27 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[6].pe/m2/multiplied__0 input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[6].pe/m2/multiplied__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#28 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[6].pe/m2/multiplied__0 input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[6].pe/m2/multiplied__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#29 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[7].pe/m2/multiplied input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[7].pe/m2/multiplied/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#30 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[7].pe/m2/multiplied input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[7].pe/m2/multiplied/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#31 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[7].pe/m2/multiplied__0 input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[7].pe/m2/multiplied__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#32 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[7].pe/m2/multiplied__0 input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[7].pe/m2/multiplied__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#33 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[8].pe/m2/multiplied input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[8].pe/m2/multiplied/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#34 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[8].pe/m2/multiplied input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[8].pe/m2/multiplied/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#35 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[8].pe/m2/multiplied__0 input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[8].pe/m2/multiplied__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#36 Warning
+Input pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[8].pe/m2/multiplied__0 input hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[8].pe/m2/multiplied__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-3#1 Warning
+PREG Output pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[0].pe/m2/multiplied__0 output hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[0].pe/m2/multiplied__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#2 Warning
+PREG Output pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[1].pe/m2/multiplied__0 output hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[1].pe/m2/multiplied__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#3 Warning
+PREG Output pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[2].pe/m2/multiplied__0 output hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[2].pe/m2/multiplied__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#4 Warning
+PREG Output pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[3].pe/m2/multiplied__0 output hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[3].pe/m2/multiplied__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#5 Warning
+PREG Output pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[4].pe/m2/multiplied__0 output hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[4].pe/m2/multiplied__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#6 Warning
+PREG Output pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[5].pe/m2/multiplied__0 output hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[5].pe/m2/multiplied__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#7 Warning
+PREG Output pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[6].pe/m2/multiplied__0 output hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[6].pe/m2/multiplied__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#8 Warning
+PREG Output pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[7].pe/m2/multiplied__0 output hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[7].pe/m2/multiplied__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#9 Warning
+PREG Output pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[8].pe/m2/multiplied__0 output hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[8].pe/m2/multiplied__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-4#1 Warning
+MREG Output pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[0].pe/m2/multiplied__0 multiplier stage hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[0].pe/m2/multiplied__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#2 Warning
+MREG Output pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[1].pe/m2/multiplied__0 multiplier stage hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[1].pe/m2/multiplied__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#3 Warning
+MREG Output pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[2].pe/m2/multiplied__0 multiplier stage hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[2].pe/m2/multiplied__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#4 Warning
+MREG Output pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[3].pe/m2/multiplied__0 multiplier stage hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[3].pe/m2/multiplied__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#5 Warning
+MREG Output pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[4].pe/m2/multiplied__0 multiplier stage hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[4].pe/m2/multiplied__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#6 Warning
+MREG Output pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[5].pe/m2/multiplied__0 multiplier stage hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[5].pe/m2/multiplied__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#7 Warning
+MREG Output pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[6].pe/m2/multiplied__0 multiplier stage hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[6].pe/m2/multiplied__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#8 Warning
+MREG Output pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[7].pe/m2/multiplied__0 multiplier stage hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[7].pe/m2/multiplied__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#9 Warning
+MREG Output pipelining  
+DSP hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[8].pe/m2/multiplied__0 multiplier stage hardware_acceletor_i/systolic_array_0/inst/genblk1[0].genblk1[8].pe/m2/multiplied__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+

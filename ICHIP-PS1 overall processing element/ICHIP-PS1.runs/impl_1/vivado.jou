@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Apr 12 17:32:32 2025
+# Process ID: 6040
+# Current directory: E:/vivado files/I_CHIP_2024/ICHIP-PS1 overall processing element/ICHIP-PS1.runs/impl_1
+# Command line: vivado.exe -log processing_elemen.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source processing_elemen.tcl -notrace
+# Log file: E:/vivado files/I_CHIP_2024/ICHIP-PS1 overall processing element/ICHIP-PS1.runs/impl_1/processing_elemen.vdi
+# Journal file: E:/vivado files/I_CHIP_2024/ICHIP-PS1 overall processing element/ICHIP-PS1.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source processing_elemen.tcl -notrace

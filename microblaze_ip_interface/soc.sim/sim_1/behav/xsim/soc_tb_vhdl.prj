@@ -1,0 +1,15 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../soc.ip_user_files/bd/soc/ip/soc_microblaze_0_1/sim/soc_microblaze_0_1.vhd" \
+"../../../../soc.ip_user_files/bd/soc/ip/soc_mdm_1_2/sim/soc_mdm_1_2.vhd" \
+"../../../../soc.ip_user_files/bd/soc/ip/soc_rst_clk_wiz_1_100M_2/sim/soc_rst_clk_wiz_1_100M_2.vhd" \
+"../../../../soc.ip_user_files/bd/soc/ip/soc_axi_bram_ctrl_0_8/sim/soc_axi_bram_ctrl_0_8.vhd" \
+"../../../../soc.ip_user_files/bd/soc/ip/soc_axi_uartlite_0_4/sim/soc_axi_uartlite_0_4.vhd" \
+"../../../../soc.ip_user_files/bd/soc/ip/soc_axi_intc_0_1/sim/soc_axi_intc_0_1.vhd" \
+"../../../../soc.ip_user_files/bd/soc/ip/soc_dlmb_v10_2/sim/soc_dlmb_v10_2.vhd" \
+"../../../../soc.ip_user_files/bd/soc/ip/soc_ilmb_v10_2/sim/soc_ilmb_v10_2.vhd" \
+"../../../../soc.ip_user_files/bd/soc/ip/soc_dlmb_bram_if_cntlr_2/sim/soc_dlmb_bram_if_cntlr_2.vhd" \
+"../../../../soc.ip_user_files/bd/soc/ip/soc_ilmb_bram_if_cntlr_2/sim/soc_ilmb_bram_if_cntlr_2.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,13 @@
+// Mem file initialization records.
+//
+// SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+// Vivado v2018.3 (64-bit)
+// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+// Created on Thursday May 22, 2025 - 12:21:45 am, from:
+//
+//     Map file     - E:\vivado files\I_CHIP_2024\microblaze_accelerator_interface\microblaze_accelerator_interface.srcs\sources_1\bd\accelerator_soc\accelerator_soc.bmm
+//     Data file(s) - E:/software_drivers_ichip_2024/hw_accelerator/Debug/hw_accelerator.elf
+//
+// Address space 'uut_accelerator_soc_i_microblaze_0.uut_accelerator_soc_i_axi_bram_ctrl_0_bram_64K_1_ADDR_SPACE', bit lane [31:0].
+//
+// Bus width = 32 bits, number of bus blocks = 1.

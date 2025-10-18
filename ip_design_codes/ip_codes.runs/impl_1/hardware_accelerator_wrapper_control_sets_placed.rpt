@@ -1,0 +1,476 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Tue May 20 14:35:26 2025
+| Host         : LAPTOP-7P8LB6PD running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file hardware_accelerator_wrapper_control_sets_placed.rpt
+| Design       : hardware_accelerator_wrapper
+| Device       : xczu7ev
+---------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   406 |
+| Unused register locations in slices containing registers |    17 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            2 |
+|      3 |            2 |
+|      4 |           16 |
+|      5 |            1 |
+|      8 |           52 |
+|      9 |            1 |
+|    16+ |          332 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               2 |            2 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |            7236 |         2407 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |           11049 |         2346 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------+--------------------------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
+|        Clock Signal       |                                  Enable Signal                                 |                        Set/Reset Signal                       | Slice Load Count | Bel Load Count |
++---------------------------+--------------------------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
+|  M_AXI_ACLK_0_IBUF_BUFGCE |                                                                                | hardware_accelerator_i/axi_master_0/inst/axi_arvalid0         |                2 |              2 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE |                                                                                |                                                               |                2 |              2 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/controller_0/inst/in_column_0                           | hardware_accelerator_i/controller_0/inst/in_column[2]_i_1_n_0 |                1 |              3 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/controller_0/inst/in_row_1                              | S_AXI_ARESETN_0_IBUF_inst/O                                   |                1 |              3 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/axi_arready0                           | S_AXI_ARESETN_0_IBUF_inst/O                                   |                1 |              4 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/axi_awready0                           | S_AXI_ARESETN_0_IBUF_inst/O                                   |                1 |              4 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/controller_0/inst/inc_s_column                          | hardware_accelerator_i/controller_0/inst/s_column[3]_i_1_n_0  |                1 |              4 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/controller_0/inst/in_column_0                           | S_AXI_ARESETN_0_IBUF_inst/O                                   |                1 |              4 |
+|  M_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_master_0/inst/inc_o_column                          | hardware_accelerator_i/axi_master_0/inst/o_column[3]_i_1_n_0  |                3 |              4 |
+|  M_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_master_0/inst/inc_in_column                         | hardware_accelerator_i/axi_master_0/inst/in_column[3]_i_1_n_0 |                1 |              4 |
+|  M_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_master_0/inst/inc_o_row                             | hardware_accelerator_i/axi_master_0/inst/o_row[3]_i_1_n_0     |                1 |              4 |
+|  M_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_master_0/inst/inc_wi_column                         | hardware_accelerator_i/axi_master_0/inst/wi_column[3]_i_1_n_0 |                1 |              4 |
+|  M_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_master_0/inst/inc_in_row                            | hardware_accelerator_i/axi_master_0/inst/in_row[3]_i_1_n_0    |                1 |              4 |
+|  M_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_master_0/inst/inc_wi_row                            | hardware_accelerator_i/axi_master_0/inst/wi_row[3]_i_1_n_0    |                1 |              4 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/controller_0/inst/wt_row[3]_i_2_n_0                     | hardware_accelerator_i/controller_0/inst/wt_row[3]_i_1_n_0    |                1 |              4 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/controller_0/inst/inc_addr                              | hardware_accelerator_i/controller_0/inst/vir_row[3]_i_1_n_0   |                1 |              4 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/controller_0/inst/inc_o_column                          | hardware_accelerator_i/controller_0/inst/o_column[3]_i_1_n_0  |                1 |              4 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/controller_0/inst/wt_column[3]_i_2_n_0                  | hardware_accelerator_i/controller_0/inst/wt_column[3]_i_1_n_0 |                2 |              4 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/controller_0/inst/inc_o_row                             | hardware_accelerator_i/controller_0/inst/o_row[3]_i_1_n_0     |                1 |              4 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/controller_0/inst/inc_s_row                             | hardware_accelerator_i/controller_0/inst/o_row[3]_i_1_n_0     |                2 |              4 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/controller_0/inst/inc_rd_address                        | hardware_accelerator_i/controller_0/inst/o_row[3]_i_1_n_0     |                1 |              5 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg4[31]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                8 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg7[23]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                6 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg7[7]_i_1_n_0                    | S_AXI_ARESETN_0_IBUF_inst/O                                   |                3 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg8[15]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                7 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg9[31]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                3 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg8[31]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                6 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg3[15]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                7 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/p_1_in[23]                             | S_AXI_ARESETN_0_IBUF_inst/O                                   |                8 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg10[7]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                2 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg1[15]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                3 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg8[7]_i_1_n_0                    | S_AXI_ARESETN_0_IBUF_inst/O                                   |                2 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg9[23]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                3 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg2[15]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                8 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg12[15]_i_1_n_0                  | S_AXI_ARESETN_0_IBUF_inst/O                                   |                7 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/p_1_in[0]                              | S_AXI_ARESETN_0_IBUF_inst/O                                   |                6 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/p_1_in[31]                             | S_AXI_ARESETN_0_IBUF_inst/O                                   |                7 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/p_1_in[15]                             | S_AXI_ARESETN_0_IBUF_inst/O                                   |                6 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg2[23]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                5 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg6[0]_i_1_n_0                    | S_AXI_ARESETN_0_IBUF_inst/O                                   |                5 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg9[15]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                3 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg9[7]_i_1_n_0                    | S_AXI_ARESETN_0_IBUF_inst/O                                   |                3 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg4[7]_i_1_n_0                    | S_AXI_ARESETN_0_IBUF_inst/O                                   |                4 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg7[15]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                4 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg7[31]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                4 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg1[7]_i_1_n_0                    | S_AXI_ARESETN_0_IBUF_inst/O                                   |                3 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg3[7]_i_1_n_0                    | S_AXI_ARESETN_0_IBUF_inst/O                                   |                3 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg3[23]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                3 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg4[15]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                7 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg14[7]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                5 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg13[31]_i_1_n_0                  | S_AXI_ARESETN_0_IBUF_inst/O                                   |                5 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg3[31]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                4 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg4[23]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                7 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg12[31]_i_1_n_0                  | S_AXI_ARESETN_0_IBUF_inst/O                                   |                5 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg13[7]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                6 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg10[15]_i_1_n_0                  | S_AXI_ARESETN_0_IBUF_inst/O                                   |                7 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg13[15]_i_1_n_0                  | S_AXI_ARESETN_0_IBUF_inst/O                                   |                6 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg14[31]_i_1_n_0                  | S_AXI_ARESETN_0_IBUF_inst/O                                   |                5 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg12[23]_i_1_n_0                  | S_AXI_ARESETN_0_IBUF_inst/O                                   |                7 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg10[23]_i_1_n_0                  | S_AXI_ARESETN_0_IBUF_inst/O                                   |                8 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg2[31]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                6 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg6[15]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                7 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg14[23]_i_1_n_0                  | S_AXI_ARESETN_0_IBUF_inst/O                                   |                7 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg6[23]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                6 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg6[31]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                6 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg2[7]_i_1_n_0                    | S_AXI_ARESETN_0_IBUF_inst/O                                   |                3 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg8[23]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                8 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg1[31]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                4 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg12[7]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                6 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg10[31]_i_1_n_0                  | S_AXI_ARESETN_0_IBUF_inst/O                                   |                7 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg14[15]_i_1_n_0                  | S_AXI_ARESETN_0_IBUF_inst/O                                   |                7 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg13[23]_i_1_n_0                  | S_AXI_ARESETN_0_IBUF_inst/O                                   |                6 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg1[23]_i_1_n_0                   | S_AXI_ARESETN_0_IBUF_inst/O                                   |                3 |              8 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE |                                                                                | S_AXI_ARESETN_0_IBUF_inst/O                                   |                5 |              9 |
+|  M_AXI_ACLK_0_IBUF_BUFGCE |                                                                                | M_AXI_ARESETN_0_IBUF_inst/O                                   |               11 |             25 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg11[31]_i_2_n_0                  | hardware_accelerator_i/axi_slave_0/inst/slv_reg11[31]_i_1_n_0 |               24 |             31 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg5[31]_i_2_n_0                   | hardware_accelerator_i/axi_slave_0/inst/slv_reg5[31]_i_1_n_0  |               24 |             31 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[3][2][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[3][1][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[2][2][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[3][8][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               27 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[4][8][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               28 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[5][8][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[6][7][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[6][0][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               28 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[3][5][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[7][2][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[5][1][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               30 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[4][2][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[3][0][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[5][4][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               30 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[3][6][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[2][1][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               30 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[4][3][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               30 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[7][3][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               29 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[6][1][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[7][4][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[7][5][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[7][6][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[7][7][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[4][7][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               28 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[6][2][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[4][4][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[7][0][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               29 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[2][4][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               30 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[3][7][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               30 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[5][2][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[6][8][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[7][1][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[6][6][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[7][8][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               30 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[8][0][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[1][8][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[2][0][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               26 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[2][7][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               30 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[4][5][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[4][6][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[5][5][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               30 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[5][6][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[2][6][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[4][1][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[6][3][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[3][4][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[2][5][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[4][0][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               30 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[2][3][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[8][5][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[8][2][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               30 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[8][1][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[8][6][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[8][8][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[8][7][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[8][3][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[8][4][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[2][8][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_slave_0/inst/slv_reg_rden__0                        | S_AXI_ARESETN_0_IBUF_inst/O                                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[0][0][31]_i_2_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               19 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[0][1][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               25 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[0][2][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[0][4][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               21 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[0][6][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[0][8][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               19 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[1][0][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               22 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[1][1][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[0][3][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               19 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[0][7][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               24 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[0][5][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[5][7][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               19 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[5][8][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               10 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[6][2][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               17 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[1][3][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[3][7][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               24 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[6][3][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               22 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[6][5][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[2][0][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               19 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[2][8][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               18 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[2][1][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               21 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[3][5][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[5][3][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               17 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[6][0][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               15 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[6][4][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[6][6][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               19 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[6][7][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               18 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[3][0][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               13 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[6][1][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               21 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[4][2][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               17 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[6][8][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               10 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[7][0][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               29 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[5][6][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               23 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[7][1][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               26 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[2][3][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[1][7][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               19 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[7][2][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               24 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[2][2][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               24 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[7][3][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               29 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[5][0][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               18 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[7][4][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               26 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[1][6][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[2][4][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[3][4][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               21 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[2][6][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               21 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[1][2][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               17 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[3][8][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               15 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[3][2][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               21 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[3][6][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               25 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[4][5][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               19 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[4][4][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               17 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[1][4][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               21 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[2][5][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               21 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[2][7][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               19 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[3][3][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               19 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[3][1][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               18 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[4][3][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               19 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[4][8][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               10 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[4][6][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               19 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[5][1][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[5][2][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               16 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[4][1][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[5][4][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               17 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[5][5][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[1][5][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               21 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[1][8][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               17 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[4][0][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               17 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[4][7][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               22 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[8][3][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               18 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[8][1][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               18 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[8][7][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               18 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[8][0][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               18 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[8][5][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               18 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[7][7][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               25 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[8][2][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               19 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[8][6][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               18 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[8][4][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               18 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[7][5][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               26 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[7][6][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               27 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[7][8][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |                9 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/output_mem_0/inst/output_memory[8][8][31]_i_1_n_0       | S_AXI_ARESETN_0_IBUF_inst/O                                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[0][5][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               12 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[0][7][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               12 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[1][1][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               13 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[1][2][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               10 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[1][4][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               10 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[1][5][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               14 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[0][2][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               11 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[1][6][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               12 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[1][3][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               11 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[0][3][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               11 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[0][8][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               15 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[1][7][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               12 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[1][0][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               15 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[1][8][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               15 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory                   | hardware_accelerator_i/and_gate_0/and_value                   |               12 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[0][1][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               14 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[0][4][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               10 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[0][6][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |                9 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[3][4][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               17 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[3][5][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               10 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[3][1][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               10 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[3][2][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               10 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[3][3][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               11 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[2][2][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               10 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[2][3][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               11 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[2][4][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               10 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[2][0][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               15 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[2][1][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               10 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[8][6][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               18 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[8][7][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               12 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[8][8][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               15 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[8][1][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               17 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[8][2][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               14 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[8][3][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               14 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[8][4][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               12 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[8][5][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               19 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[3][8][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               18 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[4][0][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               12 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[4][1][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               10 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[3][6][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               12 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[3][7][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               12 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[7][7][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               15 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[7][8][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               14 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[8][0][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               19 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[7][5][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               19 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[7][6][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               17 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[7][3][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               13 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[7][4][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               11 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[3][2][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[1][5][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               23 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[3][3][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               21 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[1][6][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               28 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[0][1][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               23 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[2][0][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               26 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[1][8][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[2][2][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[1][1][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               23 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[1][0][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               26 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[0][8][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               21 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[1][3][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[1][7][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               22 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[0][7][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               22 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[2][3][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               21 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[2][8][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[0][3][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               19 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[0][6][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[2][6][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               29 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[3][0][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[2][4][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               17 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[1][2][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               30 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[2][5][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[0][0][31]_i_2_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               27 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[0][2][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               16 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[0][4][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               27 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[1][4][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               23 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[2][1][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               30 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[3][1][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               30 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[2][7][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               21 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[0][5][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               21 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[6][6][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               22 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[8][0][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               21 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[4][3][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               28 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[6][5][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               23 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[7][0][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               29 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[3][4][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               28 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[6][8][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[5][8][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               30 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[7][2][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               25 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[7][5][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               22 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[5][6][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               24 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[8][1][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[8][2][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               19 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[8][4][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               12 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[4][8][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               30 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[8][5][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               22 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[8][6][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               25 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[8][7][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               14 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[4][2][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[7][3][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               28 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[8][8][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               22 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[3][7][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               22 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[4][0][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[5][4][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               28 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[7][4][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               23 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[6][7][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               27 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[4][1][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               30 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[6][0][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[7][6][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[6][4][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               29 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[7][8][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[6][3][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               28 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[5][0][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[8][3][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               19 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[5][3][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               28 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[5][5][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[7][1][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               26 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[5][2][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               28 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[4][4][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               29 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[3][5][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[4][6][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               28 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[4][7][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               26 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[4][5][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[5][7][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               26 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[3][8][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               20 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[5][1][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               30 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[6][1][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               23 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[6][2][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               27 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[7][7][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               30 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[6][8][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               18 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[7][0][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               19 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[7][1][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               19 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[7][2][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               14 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[5][1][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               10 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[5][2][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               16 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[4][8][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               18 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[5][0][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               13 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[5][7][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               16 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/weight_mem_0/inst/weight_memory[3][6][31]_i_1_n_0       | hardware_accelerator_i/and_gate_0/and_value                   |               27 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[5][4][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               16 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[5][6][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               18 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[5][5][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |                9 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[6][6][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               16 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[6][7][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               15 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[6][3][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               14 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[6][4][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               17 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[6][5][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               18 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[6][1][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               16 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[6][2][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               14 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[5][8][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               17 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[6][0][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               12 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[2][7][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               12 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[2][8][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               17 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[3][0][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               12 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[2][6][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               12 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[2][5][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |                9 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[4][4][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               16 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[4][5][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |                9 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[4][6][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               12 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[4][7][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               14 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[4][2][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               10 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[4][3][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               14 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[0][0][31]_i_2_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[0][1][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[0][3][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[0][2][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[0][6][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[0][5][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[1][1][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[1][3][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[1][0][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               29 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[0][7][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               29 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[0][4][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[0][8][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[1][4][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[1][2][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  M_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_master_0/inst/axi_araddr                            | M_AXI_ARESETN_0_IBUF_inst/O                                   |               12 |             32 |
+|  M_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_master_0/inst/axi_awaddr[31]_i_2_n_0                | M_AXI_ARESETN_0_IBUF_inst/O                                   |               10 |             32 |
+|  M_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/axi_master_0/inst/axi_wdata[31]_i_1_n_0                 | M_AXI_ARESETN_0_IBUF_inst/O                                   |               11 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[5][0][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               30 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[5][3][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[5][7][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[3][3][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[1][5][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               31 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[6][4][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[1][6][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[6][5][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/input_mem_0/inst/input_memory[1][7][31]_i_1_n_0         | hardware_accelerator_i/and_gate_0/and_value                   |               32 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE | hardware_accelerator_i/vir_input_mem_0/inst/vir_input_memory[5][3][31]_i_1_n_0 | hardware_accelerator_i/and_gate_0/and_value                   |               14 |             32 |
+|  S_AXI_ACLK_0_IBUF_BUFGCE |                                                                                | hardware_accelerator_i/and_gate_0/and_value                   |             2389 |           7200 |
++---------------------------+--------------------------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
+
+

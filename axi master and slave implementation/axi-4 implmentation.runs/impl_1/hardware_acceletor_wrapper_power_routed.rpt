@@ -1,0 +1,267 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date             : Tue Jul 29 12:01:04 2025
+| Host             : LAPTOP-7P8LB6PD running 64-bit major release  (build 9200)
+| Command          : report_power -file hardware_acceletor_wrapper_power_routed.rpt -pb hardware_acceletor_wrapper_power_summary_routed.pb -rpx hardware_acceletor_wrapper_power_routed.rpx
+| Design           : hardware_acceletor_wrapper
+| Device           : xczu7ev-ffvc1156-2-e
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-----------------------------------+
+| Total On-Chip Power (W)  | 148.655 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                      |
+| Power Budget Margin (W)  | NA                                |
+| Dynamic (W)              | 143.845                           |
+| Device Static (W)        | 4.810                             |
+| Effective TJA (C/W)      | 1.0                               |
+| Max Ambient (C)          | 0.0                               |
+| Junction Temperature (C) | 125.0                             |
+| Confidence Level         | Low                               |
+| Setting File             | ---                               |
+| Simulation Activity File | ---                               |
+| Design Nets Matched      | NA                                |
++--------------------------+-----------------------------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| CLB Logic      |    55.448 |    20790 |       --- |             --- |
+|   LUT as Logic |    54.547 |     7419 |    230400 |            3.22 |
+|   Register     |     0.454 |    11296 |    460800 |            2.45 |
+|   CARRY8       |     0.447 |       71 |     28800 |            0.25 |
+|   BUFG         |    <0.001 |        1 |        64 |            1.56 |
+|   Others       |     0.000 |       72 |       --- |             --- |
+|   F7/F8 Muxes  |     0.000 |      992 |    230400 |            0.43 |
+| Signals        |    62.875 |    18641 |       --- |             --- |
+| DSPs           |     4.213 |       18 |      1728 |            1.04 |
+| I/O            |    21.309 |      239 |       360 |           66.39 |
+| Static Power   |     4.810 |          |           |                 |
+| Total          |   148.655 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------------+-------------+-----------+-------------+------------+
+| Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------------+-------------+-----------+-------------+------------+
+| Vccint          |       0.850 |   148.100 |     144.185 |      3.915 |
+| Vccint_io       |       0.850 |     1.407 |       1.172 |      0.235 |
+| Vccbram         |       0.850 |     0.051 |       0.000 |      0.051 |
+| Vccaux          |       1.800 |     0.351 |       0.000 |      0.351 |
+| Vccaux_io       |       1.800 |     2.537 |       2.481 |      0.056 |
+| Vcco33          |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18          |       1.800 |     8.793 |       8.793 |      0.000 |
+| Vcco15          |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135         |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12          |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vcco10          |       1.000 |     0.000 |       0.000 |      0.000 |
+| Vccadc          |       1.800 |     0.008 |       0.000 |      0.008 |
+| VCC_PSINTFP     |       0.850 |     0.000 |       0.000 |      0.000 |
+| VCC_PSINTLP     |       0.850 |     0.089 |       0.000 |      0.089 |
+| VPS_MGTRAVCC    |       0.850 |     0.000 |       0.000 |      0.000 |
+| VCC_PSINTFP_DDR |       0.850 |     0.000 |       0.000 |      0.000 |
+| VCC_PSPLL       |       1.200 |     0.002 |       0.000 |      0.002 |
+| VPS_MGTRAVTT    |       1.800 |     0.000 |       0.000 |      0.000 |
+| VCCO_PSDDR_504  |       1.200 |     0.000 |       0.000 |      0.000 |
+| VCC_PSAUX       |       1.800 |     0.002 |       0.000 |      0.002 |
+| VCC_PSBATT      |       1.200 |     0.000 |       0.000 |      0.000 |
+| VCC_PSDDR_PLL   |       1.800 |     0.000 |       0.000 |      0.000 |
+| VCCO_PSIO0_500  |       3.300 |     0.000 |       0.000 |      0.000 |
+| VCCO_PSIO1_501  |       3.300 |     0.000 |       0.000 |      0.000 |
+| VCCO_PSIO2_502  |       3.300 |     0.000 |       0.000 |      0.000 |
+| VCCO_PSIO3_503  |       3.300 |     0.000 |       0.000 |      0.000 |
+| VCC_PSADC       |       1.800 |     0.002 |       0.000 |      0.002 |
+| VCCINT_VCU      |       0.900 |     0.452 |       0.000 |      0.452 |
+| MGTAVcc         |       0.900 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt         |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux       |       1.800 |     0.000 |       0.000 |      0.000 |
++-----------------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.0                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 1.5                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-------------------------------+-----------+
+| Name                          | Power (W) |
++-------------------------------+-----------+
+| hardware_acceletor_wrapper    |   143.845 |
+|   M_AXI_0_arready_IBUF_inst   |     0.012 |
+|   M_AXI_0_awready_IBUF_inst   |     0.010 |
+|   M_AXI_0_bvalid_IBUF_inst    |     0.006 |
+|   M_AXI_0_rdata_IBUF[0]_inst  |     0.101 |
+|   M_AXI_0_rdata_IBUF[10]_inst |     0.090 |
+|   M_AXI_0_rdata_IBUF[11]_inst |     0.089 |
+|   M_AXI_0_rdata_IBUF[12]_inst |     0.089 |
+|   M_AXI_0_rdata_IBUF[13]_inst |     0.088 |
+|   M_AXI_0_rdata_IBUF[14]_inst |     0.090 |
+|   M_AXI_0_rdata_IBUF[15]_inst |     0.082 |
+|   M_AXI_0_rdata_IBUF[16]_inst |     0.093 |
+|   M_AXI_0_rdata_IBUF[17]_inst |     0.089 |
+|   M_AXI_0_rdata_IBUF[18]_inst |     0.088 |
+|   M_AXI_0_rdata_IBUF[19]_inst |     0.087 |
+|   M_AXI_0_rdata_IBUF[1]_inst  |     0.083 |
+|   M_AXI_0_rdata_IBUF[20]_inst |     0.087 |
+|   M_AXI_0_rdata_IBUF[21]_inst |     0.083 |
+|   M_AXI_0_rdata_IBUF[22]_inst |     0.084 |
+|   M_AXI_0_rdata_IBUF[23]_inst |     0.084 |
+|   M_AXI_0_rdata_IBUF[24]_inst |     0.090 |
+|   M_AXI_0_rdata_IBUF[25]_inst |     0.092 |
+|   M_AXI_0_rdata_IBUF[26]_inst |     0.088 |
+|   M_AXI_0_rdata_IBUF[27]_inst |     0.093 |
+|   M_AXI_0_rdata_IBUF[28]_inst |     0.087 |
+|   M_AXI_0_rdata_IBUF[29]_inst |     0.094 |
+|   M_AXI_0_rdata_IBUF[2]_inst  |     0.084 |
+|   M_AXI_0_rdata_IBUF[30]_inst |     0.091 |
+|   M_AXI_0_rdata_IBUF[31]_inst |     0.082 |
+|   M_AXI_0_rdata_IBUF[3]_inst  |     0.088 |
+|   M_AXI_0_rdata_IBUF[4]_inst  |     0.089 |
+|   M_AXI_0_rdata_IBUF[5]_inst  |     0.093 |
+|   M_AXI_0_rdata_IBUF[6]_inst  |     0.091 |
+|   M_AXI_0_rdata_IBUF[7]_inst  |     0.084 |
+|   M_AXI_0_rdata_IBUF[8]_inst  |     0.083 |
+|   M_AXI_0_rdata_IBUF[9]_inst  |     0.083 |
+|   M_AXI_0_rvalid_IBUF_inst    |     0.014 |
+|   M_AXI_0_wready_IBUF_inst    |     0.012 |
+|   S_AXI_0_araddr_IBUF[2]_inst |     0.007 |
+|   S_AXI_0_araddr_IBUF[3]_inst |     0.007 |
+|   S_AXI_0_araddr_IBUF[4]_inst |     0.007 |
+|   S_AXI_0_arvalid_IBUF_inst   |     0.008 |
+|   S_AXI_0_awaddr_IBUF[2]_inst |     0.008 |
+|   S_AXI_0_awaddr_IBUF[3]_inst |     0.008 |
+|   S_AXI_0_awaddr_IBUF[4]_inst |     0.012 |
+|   S_AXI_0_awvalid_IBUF_inst   |     0.010 |
+|   S_AXI_0_bready_IBUF_inst    |     0.009 |
+|   S_AXI_0_rready_IBUF_inst    |     0.007 |
+|   S_AXI_0_wdata_IBUF[0]_inst  |     0.020 |
+|   S_AXI_0_wdata_IBUF[10]_inst |     0.020 |
+|   S_AXI_0_wdata_IBUF[11]_inst |     0.019 |
+|   S_AXI_0_wdata_IBUF[12]_inst |     0.019 |
+|   S_AXI_0_wdata_IBUF[13]_inst |     0.021 |
+|   S_AXI_0_wdata_IBUF[14]_inst |     0.021 |
+|   S_AXI_0_wdata_IBUF[15]_inst |     0.023 |
+|   S_AXI_0_wdata_IBUF[16]_inst |     0.025 |
+|   S_AXI_0_wdata_IBUF[17]_inst |     0.024 |
+|   S_AXI_0_wdata_IBUF[18]_inst |     0.023 |
+|   S_AXI_0_wdata_IBUF[19]_inst |     0.022 |
+|   S_AXI_0_wdata_IBUF[1]_inst  |     0.021 |
+|   S_AXI_0_wdata_IBUF[20]_inst |     0.024 |
+|   S_AXI_0_wdata_IBUF[21]_inst |     0.030 |
+|   S_AXI_0_wdata_IBUF[22]_inst |     0.020 |
+|   S_AXI_0_wdata_IBUF[23]_inst |     0.024 |
+|   S_AXI_0_wdata_IBUF[24]_inst |     0.025 |
+|   S_AXI_0_wdata_IBUF[25]_inst |     0.020 |
+|   S_AXI_0_wdata_IBUF[26]_inst |     0.022 |
+|   S_AXI_0_wdata_IBUF[27]_inst |     0.021 |
+|   S_AXI_0_wdata_IBUF[28]_inst |     0.023 |
+|   S_AXI_0_wdata_IBUF[29]_inst |     0.022 |
+|   S_AXI_0_wdata_IBUF[2]_inst  |     0.021 |
+|   S_AXI_0_wdata_IBUF[30]_inst |     0.025 |
+|   S_AXI_0_wdata_IBUF[31]_inst |     0.025 |
+|   S_AXI_0_wdata_IBUF[3]_inst  |     0.022 |
+|   S_AXI_0_wdata_IBUF[4]_inst  |     0.021 |
+|   S_AXI_0_wdata_IBUF[5]_inst  |     0.020 |
+|   S_AXI_0_wdata_IBUF[6]_inst  |     0.022 |
+|   S_AXI_0_wdata_IBUF[7]_inst  |     0.025 |
+|   S_AXI_0_wdata_IBUF[8]_inst  |     0.019 |
+|   S_AXI_0_wdata_IBUF[9]_inst  |     0.025 |
+|   S_AXI_0_wstrb_IBUF[0]_inst  |     0.019 |
+|   S_AXI_0_wstrb_IBUF[1]_inst  |     0.018 |
+|   S_AXI_0_wstrb_IBUF[2]_inst  |     0.018 |
+|   S_AXI_0_wstrb_IBUF[3]_inst  |     0.021 |
+|   S_AXI_0_wvalid_IBUF_inst    |     0.012 |
+|   S_AXI_ACLK_IBUF_inst        |     0.004 |
+|   hardware_acceletor_i        |   118.801 |
+|     axi_master_0              |     1.165 |
+|       inst                    |     1.165 |
+|     axi_slave_0               |     0.221 |
+|       inst                    |     0.221 |
+|     controller_0              |     2.279 |
+|       inst                    |     2.279 |
+|     input_mem_0               |     8.150 |
+|       inst                    |     8.150 |
+|     output_mem_0              |     0.549 |
+|       inst                    |     0.549 |
+|     systolic_array_0          |   102.487 |
+|       inst                    |   102.487 |
+|     vir_input_mem_0           |     2.886 |
+|       inst                    |     2.886 |
+|     weight_mem_0              |     1.064 |
+|       inst                    |     1.051 |
++-------------------------------+-----------+
+
+

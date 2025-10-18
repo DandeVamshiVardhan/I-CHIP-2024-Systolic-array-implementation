@@ -1,0 +1,12 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+Block Memory Generator module soc_tb.uut.soc_i.axi_bram_ctrl_0_bram.inst.native_mem_mapped_module.blk_mem_gen_v8_4_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module soc_tb.uut.soc_i.microblaze_0_local_memory.lmb_bram.inst.native_mem_mapped_module.blk_mem_gen_v8_4_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Convolution_output_matrix
+      1090519040      1098907648      1107296256
+      1090519040      1098907648      1107296256
+Multiplication_output_matrix
+      1118437376      1118437376      1118437376
+      1118437376      1118437376      1118437376
+      1118437376      1118437376      1118437376
+Matrix_convolution and matrix_multiplication implemented correctly using SYSTOLIC ARRAY architecture along with interrupt setup and handling

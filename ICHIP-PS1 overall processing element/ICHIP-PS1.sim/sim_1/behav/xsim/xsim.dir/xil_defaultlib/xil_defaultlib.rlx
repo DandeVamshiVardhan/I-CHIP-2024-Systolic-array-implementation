@@ -1,0 +1,7 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+E:/vivado files/I_CHIP_2024/ICHIP-PS1 overall processing element/ICHIP-PS1.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+E:/vivado files/I_CHIP_2024/ICHIP-PS1 overall processing element/ICHIP-PS1.srcs/sim_1/new/processing_element_tb.v,1719234468,verilog,,,,processing_element_tb,,,,,,,,
+E:/vivado files/I_CHIP_2024/ICHIP-PS1 overall processing element/ICHIP-PS1.srcs/sources_1/new/adder.v,1719149098,verilog,,E:/vivado files/I_CHIP_2024/ICHIP-PS1 overall processing element/ICHIP-PS1.srcs/sim_1/new/processing_element_tb.v,,adder;adder1;leftshifted;multiplier;priorityencoder;rightshifted,,,,,,,,

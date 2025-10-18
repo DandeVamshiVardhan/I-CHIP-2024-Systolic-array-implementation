@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat May 24 02:49:09 2025
+# Process ID: 8116
+# Current directory: E:/vivado files/I_CHIP_2024/ip_design_codes
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18920 E:\vivado files\I_CHIP_2024\ip_design_codes\ip_codes.xpr
+# Log file: E:/vivado files/I_CHIP_2024/ip_design_codes/vivado.log
+# Journal file: E:/vivado files/I_CHIP_2024/ip_design_codes\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {E:/vivado files/I_CHIP_2024/ip_design_codes/ip_codes.xpr}
+update_compile_order -fileset sources_1
+ipx::open_ipxact_file {E:\vivado files\I_CHIP_2024\manufactured_ip\component.xml}
