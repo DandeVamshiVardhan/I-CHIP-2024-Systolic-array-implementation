@@ -1,0 +1,110 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 15288
+License: Customer
+
+Current time: 	Wed May 21 23:59:16 IST 2025
+Time zone: 	India Standard Time (Asia/Calcutta)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 16
+
+Screen size: 1920x1200
+Screen resolution (DPI): 120
+Available screens: 1
+Available disk space: 0 GB
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	F:/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4
+Java executable location: 	F:/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	vamsh
+User home directory: C:/Users/vamsh
+User working directory: E:/vivado files/I_CHIP_2024/microblaze_accelerator_interface
+User country: 	IN
+User language: 	en
+User locale: 	en_IN
+
+RDI_BASEROOT: F:/Xilinx/Vivado
+HDI_APPROOT: F:/Xilinx/Vivado/2018.3
+RDI_DATADIR: F:/Xilinx/Vivado/2018.3/data
+RDI_BINDIR: F:/Xilinx/Vivado/2018.3/bin
+
+Vivado preferences file location: C:/Users/vamsh/AppData/Roaming/Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: C:/Users/vamsh/AppData/Roaming/Xilinx/Vivado/2018.3/
+Vivado layouts directory: C:/Users/vamsh/AppData/Roaming/Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	F:/Xilinx/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	E:/vivado files/I_CHIP_2024/microblaze_accelerator_interface/vivado.log
+Vivado journal file location: 	E:/vivado files/I_CHIP_2024/microblaze_accelerator_interface/vivado.jou
+Engine tmp dir: 	E:/vivado files/I_CHIP_2024/microblaze_accelerator_interface/.Xil/Vivado-15288-LAPTOP-7P8LB6PD
+
+Xilinx Environment Variables
+----------------------------
+XILINX: F:/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_DSP: F:/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: F:/Xilinx/Vivado/2018.3
+XILINX_SDK: F:/Xilinx/SDK/2018.3
+XILINX_VIVADO: F:/Xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: F:/Xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 581 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 110 MB (+113237kb) [00:00:11]
+// [Engine Memory]: 570 MB (+446634kb) [00:00:11]
+// bx (cp):  Open Project : addNotify
+// Opening Vivado Project: E:\vivado files\I_CHIP_2024\microblaze_accelerator_interface\microblaze_accelerator_interface.xpr. Version: Vivado v2018.3 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {E:/vivado files/I_CHIP_2024/microblaze_accelerator_interface/microblaze_accelerator_interface.xpr} 
+// HMemoryUtils.trashcanNow. Engine heap size: 612 MB. GUI used memory: 47 MB. Current time: 5/21/25, 11:59:18 PM IST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 689 MB. GUI used memory: 47 MB. Current time: 5/21/25, 11:59:33 PM IST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 759 MB (+167933kb) [00:00:41]
+// [Engine Memory]: 814 MB (+17691kb) [00:00:44]
+// [Engine Memory]: 874 MB (+20357kb) [00:00:46]
+// WARNING: HEventQueue.dispatchEvent() is taking  7842 ms.
+// Tcl Message: open_project {E:/vivado files/I_CHIP_2024/microblaze_accelerator_interface/microblaze_accelerator_interface.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Xilinx/Vivado/2018.3/data/ip'. 
