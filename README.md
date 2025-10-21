@@ -2,9 +2,8 @@
 
 # I-CHIP-2024 Systolic Array Implementation
 
-<p align="center">
-	<img src="./SoC Design.png" alt="SoC Block Diagram" width="600"/>
-</p>
+
+![SoC Block Diagram](SoC%20Design.png)
 
 ## Overview
 
@@ -19,10 +18,9 @@ This repository presents a complete, modular, and industry-ready hardware/softwa
 - Example C code for hardware/software co-design and validation
 
 ---
-<p align="center">
-	<img src="./Output.png" alt="Accelerator Output Example" width="500"/>
-	<br><em>Sample output from the hardware accelerator</em>
-</p>
+
+![Accelerator Output Example](Output.png)
+<p align="center"><em>Sample output from the hardware accelerator</em></p>
 
 ---
 
